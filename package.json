@@ -1,0 +1,38 @@
+{
+  "name": "dog-discovery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env server/index.js",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server/index.js --production",
+    "test": "node --env-file-if-exists=.env --env-file-if-exists=.env.test --test tests/*.test.js",
+    "test:e2e": "node --env-file-if-exists=.env --env-file-if-exists=.env.test node_modules/@playwright/test/cli.js test",
+    "db:test:start": "node --env-file-if-exists=.env.test scripts/postgres-test.js",
+    "db:migrate": "node --env-file-if-exists=.env scripts/migrate.js",
+    "db:import-mysql": "node --env-file-if-exists=.env scripts/import-mysql.js"
+  },
+  "dependencies": {
+    "@supabase/ssr": "^0.12.7",
+    "@supabase/supabase-js": "^2.119.0",
+    "cookie": "^2.0.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "lucide-react": "^0.577.0",
+    "multer": "^2.0.2",
+    "mysql2": "^3.24.6",
+    "pg": "^8.23.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "vite": "^8.0.3"
+  }
+}

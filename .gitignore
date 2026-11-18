@@ -1,0 +1,12 @@
+node_modules/
+dist/
+data/
+uploads/
+.env
+test-results/
+playwright-report/
+.DS_Store
+
+.env.*
+!.env.example
+!.env.supabase.example
