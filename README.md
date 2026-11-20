@@ -1,6 +1,6 @@
 # Dog Discovery
 
-A responsive React application backed by Express, **Supabase PostgreSQL**, **Supabase Auth**, and **Supabase Storage**. Email/password, Google, and GitHub sign-in are supported. The repository is prepared for Supabase; live sign-in requires your project and OAuth provider configuration.
+Dog Discovery is a responsive React application backed by Express, **Supabase PostgreSQL**, **Supabase Auth**, and **Supabase Storage**. Email/password and OAuth (Google and GitHub) sign-in are supported. The repository is prepared for Supabase; live sign-in requires your project and OAuth provider configuration.
 
 ## First-time setup
 
