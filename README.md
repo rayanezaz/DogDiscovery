@@ -16,6 +16,7 @@ npm run db:import-mysql
 npm run dev
 ```
 
+
 Open **http://localhost:3000**. Express serves the API and Vite serves React on the same origin. Vite's WebSocket shares port 3000; it does not require port 24678. Keep `APP_ORIGIN` consistent with the URL you use.
 
 OAuth provider client secrets belong in Supabase's provider settings. The database connection string and Supabase publishable key are read server-side from `.env`. No service-role key is required. The client contains no database credentials or Supabase session tokens.
