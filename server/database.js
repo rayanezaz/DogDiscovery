@@ -1,5 +1,5 @@
 import pg from 'pg';
-import { AsyncLocalStorage } from 'node:async_hooks';
+import {AsyncLocalStorage} from 'node:async_hooks';
 import { readFile } from 'node:fs/promises';
 
 export async function connectionOptions(connectionString = process.env.DATABASE_URL) {
