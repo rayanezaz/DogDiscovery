@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Heart, MapPin, MessageCircle, ArrowUpRight, ShieldCheck, PawPrint } from 'lucide-react';
+import {Heart, MapPin, MessageCircle, ArrowUpRight, ShieldCheck, PawPrint} from 'lucide-react';
 import { api } from './api';
 import { useStore } from './store';
 import { Modal, Button, Photo, Loading, ageLabel, Field } from './components';
