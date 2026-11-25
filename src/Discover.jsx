@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowRight, ArrowUpRight, Search, SlidersHorizontal, PawPrint, Heart, MapPin, X, Sparkles } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Search, SlidersHorizontal, PawPrint, Heart, MapPin, X } from 'lucide-react';
 import { api } from './api';
 import { useStore } from './store';
 import { Button, DogCard, Empty, Loading, Photo } from './components';
@@ -30,7 +30,6 @@ export function Discover({ saved = false, onOpen }) {
       </div>
       <div className="hero-art"><div className="hero-orbit"/><div className="hero-photo"><Photo src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=1100&q=90" alt="A golden retriever ready for a new adventure"/><div className="hero-photo-gradient"/><span className="hero-photo-label"><span>Meet Maple</span><small>Professional tail-wagger</small></span><button onClick={()=>onOpen(1)} aria-label="Meet Maple"><ArrowUpRight/></button></div><div className="hero-sticker"><Heart size={21}/><span>Love comes<br/>with four paws.</span></div><span className="hero-spark">✳</span><span className="hero-squiggle">⌁</span></div>
     </section>}
-    {!saved && <div className="values-strip"><div className="wrap"><span><PawPrint size={18}/> Every dog deserves a home</span><span><Heart size={18}/> Find a connection that feels right</span><span><Sparkles size={18}/> A fresh start, together</span></div></div>}
     <section id="discover" className="catalog wrap">
       <div className="section-heading"><div><div className="eyebrow">{saved ? 'A PLACE FOR YOUR FAVORITES' : 'SMALL MOMENTS. BIG CONNECTIONS.'}</div><h2>{saved ? 'A few dogs close to your heart.' : 'Someone wonderful is waiting.'}</h2><p>{saved ? 'Your saved companions, all in one happy place.' : 'Different personalities. Different stories. One thing in common: a whole lot of love.'}</p></div><PawPrint className="heading-paw" size={45}/></div>
       {saved && ready && !user ? <Empty title="Keep your favorites close." action={<Button onClick={()=>setAuthOpen(true)}>Sign in to see saved dogs</Button>}>Sign in to start your own little shortlist of best friends.</Empty> : <>
